@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.radnet.com/.well-known/
+host: https://www.radnet.com
+documents:
+  - path: /.well-known/security.txt          # RFC 9116
+    status: 200
+    file: radnet-security.txt
+  - path: /.well-known/openid-configuration   # OIDC discovery
+    status: 404
+  - path: /.well-known/oauth-authorization-server  # RFC 8414
+    status: 404
+  - path: /.well-known/api-catalog             # RFC 9727
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+notes: >-
+  RadNet Inc. publishes a valid RFC 9116 security.txt with a cybersecurity
+  reporting contact. DeepHealth (RadNet's AI/digital-health division at
+  deephealth.com) also publishes its own /.well-known/security.txt (200). No
+  OpenID/OAuth discovery, API catalog, or AI-plugin manifest is exposed on the
+  public web host.
